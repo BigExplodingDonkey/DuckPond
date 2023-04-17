@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+public class Duckie
+{
+    private String name;
+    private String costume;
+    private boolean isBouyant;
+    public Duckie(String moniker, String style, boolean swim)
+    {
+        name = moniker;
+        costume = style;
+        isBouyant = swim;
+    }
+    public String toString()
+    {
+        String temp = "Hello, my name is " + name + " and I am a rubber duckie! \n" + "My costume is " + costume;
+        if(isBouyant)
+            temp += "\nand I can float.\n";
+        else
+            temp += "\nand I cannot float.\n";
+        return temp;
+    }
+}
+public class DuckPond
+{
+    ArrayList<Duckie> duckpond = new ArrayList<Duckie>();
+    duckpond.add(new Duckie("Dave", "Reading", true));
+}
